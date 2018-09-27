@@ -30,10 +30,10 @@
         {
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.addgen = new System.Windows.Forms.Button();
-            this.addgentext = new System.Windows.Forms.TextBox();
-            this.addzitext = new System.Windows.Forms.TextBox();
             this.addzi = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.text = new System.Windows.Forms.TextBox();
+            this.rename = new System.Windows.Forms.Button();
+            this.addtext = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // treeView1
@@ -45,7 +45,7 @@
             // 
             // addgen
             // 
-            this.addgen.Location = new System.Drawing.Point(161, 35);
+            this.addgen.Location = new System.Drawing.Point(22, 35);
             this.addgen.Name = "addgen";
             this.addgen.Size = new System.Drawing.Size(75, 23);
             this.addgen.TabIndex = 2;
@@ -53,23 +53,9 @@
             this.addgen.UseVisualStyleBackColor = true;
             this.addgen.Click += new System.EventHandler(this.addgen_Click);
             // 
-            // addgentext
-            // 
-            this.addgentext.Location = new System.Drawing.Point(38, 36);
-            this.addgentext.Name = "addgentext";
-            this.addgentext.Size = new System.Drawing.Size(100, 21);
-            this.addgentext.TabIndex = 3;
-            // 
-            // addzitext
-            // 
-            this.addzitext.Location = new System.Drawing.Point(267, 36);
-            this.addzitext.Name = "addzitext";
-            this.addzitext.Size = new System.Drawing.Size(100, 21);
-            this.addzitext.TabIndex = 4;
-            // 
             // addzi
             // 
-            this.addzi.Location = new System.Drawing.Point(398, 35);
+            this.addzi.Location = new System.Drawing.Point(119, 35);
             this.addzi.Name = "addzi";
             this.addzi.Size = new System.Drawing.Size(75, 23);
             this.addzi.TabIndex = 5;
@@ -77,23 +63,44 @@
             this.addzi.UseVisualStyleBackColor = true;
             this.addzi.Click += new System.EventHandler(this.addzi_Click);
             // 
-            // textBox3
+            // text
             // 
-            this.textBox3.Location = new System.Drawing.Point(309, 76);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(536, 458);
-            this.textBox3.TabIndex = 6;
+            this.text.Location = new System.Drawing.Point(309, 76);
+            this.text.Multiline = true;
+            this.text.Name = "text";
+            this.text.Size = new System.Drawing.Size(536, 458);
+            this.text.TabIndex = 6;
+            this.text.Visible = false;
+            // 
+            // rename
+            // 
+            this.rename.Location = new System.Drawing.Point(338, 35);
+            this.rename.Name = "rename";
+            this.rename.Size = new System.Drawing.Size(75, 23);
+            this.rename.TabIndex = 7;
+            this.rename.Text = "重命名";
+            this.rename.UseVisualStyleBackColor = true;
+            this.rename.Click += new System.EventHandler(this.rename_Click);
+            // 
+            // addtext
+            // 
+            this.addtext.Location = new System.Drawing.Point(225, 35);
+            this.addtext.Name = "addtext";
+            this.addtext.Size = new System.Drawing.Size(75, 23);
+            this.addtext.TabIndex = 8;
+            this.addtext.Text = "添加资料";
+            this.addtext.UseVisualStyleBackColor = true;
+            this.addtext.Click += new System.EventHandler(this.addtext_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(897, 560);
-            this.Controls.Add(this.textBox3);
+            this.ClientSize = new System.Drawing.Size(875, 560);
+            this.Controls.Add(this.addtext);
+            this.Controls.Add(this.rename);
+            this.Controls.Add(this.text);
             this.Controls.Add(this.addzi);
-            this.Controls.Add(this.addzitext);
-            this.Controls.Add(this.addgentext);
             this.Controls.Add(this.addgen);
             this.Controls.Add(this.treeView1);
             this.Name = "Form1";
@@ -108,10 +115,10 @@
 
         private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.Button addgen;
-        private System.Windows.Forms.TextBox addgentext;
-        private System.Windows.Forms.TextBox addzitext;
         private System.Windows.Forms.Button addzi;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox text;
+        private System.Windows.Forms.Button rename;
+        private System.Windows.Forms.Button addtext;
     }
 }
 
