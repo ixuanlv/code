@@ -20,10 +20,15 @@ namespace 个人资料管理
 
         }
 
-        public void conn()
-        {
+       
+                public class xxx
+                {
 
-        }
+                     public static string lablezi;
+                     public static string textzi;
+   
+                }
+         
         private void Form1_Load(object sender, EventArgs e)
         {
             treeView1.LabelEdit = true;
@@ -53,16 +58,14 @@ namespace 个人资料管理
                         sqlzi.Fill(Datazi, "1");
                         foreach (DataRow row1 in Datazi.Tables["1"].Rows)
                         {
-                            string lablezi = row1[2].ToString();
-                            string textzi = row1[3].ToString();
-                            Console.WriteLine(lablezi+"    "+textzi);
+                            xxx.lablezi = row1[2].ToString();
+                            xxx.textzi = row1[3].ToString();
+                            //Console.WriteLine(xxx.lablezi+"    "+ xxx.textzi);
                         }
                     }
-                
-                          
+                Console.WriteLine(xxx.lablezi + "+++" + xxx.textzi);
             }
-
-          
+             
 
             //String zi = "select * from zi where name='" + name + "'";
             //SqlDataAdapter sqlzi = new SqlDataAdapter(zi, constr);
@@ -76,12 +79,8 @@ namespace 个人资料管理
 
             //}
 
-
-
-
         }
      
-
 
 
 
