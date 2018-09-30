@@ -5,6 +5,12 @@ VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "个人资料管理", "个人资料管理\个人资料管理.csproj", "{CFEAC7B5-0DBC-42A3-9E69-7C9FC308B200}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "shenyan", "E:\VS code\shenyan-nt\shenyan-nt\shenyan.csproj", "{0534FA1F-E8F9-42EE-B749-2A7206FDE950}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "窗体", "E:\VS code\窗体\窗体\窗体.csproj", "{C8CF0C2A-5F9E-4771-B32E-C43CF38545A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "日历", "E:\VS code\日历\日历\日历.csproj", "{88EFE6EF-F978-4018-92A2-565174CFA591}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{CFEAC7B5-0DBC-42A3-9E69-7C9FC308B200}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CFEAC7B5-0DBC-42A3-9E69-7C9FC308B200}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CFEAC7B5-0DBC-42A3-9E69-7C9FC308B200}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0534FA1F-E8F9-42EE-B749-2A7206FDE950}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0534FA1F-E8F9-42EE-B749-2A7206FDE950}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0534FA1F-E8F9-42EE-B749-2A7206FDE950}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0534FA1F-E8F9-42EE-B749-2A7206FDE950}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8CF0C2A-5F9E-4771-B32E-C43CF38545A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8CF0C2A-5F9E-4771-B32E-C43CF38545A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8CF0C2A-5F9E-4771-B32E-C43CF38545A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8CF0C2A-5F9E-4771-B32E-C43CF38545A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88EFE6EF-F978-4018-92A2-565174CFA591}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88EFE6EF-F978-4018-92A2-565174CFA591}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88EFE6EF-F978-4018-92A2-565174CFA591}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88EFE6EF-F978-4018-92A2-565174CFA591}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -20,81 +20,96 @@ namespace 个人资料管理
 
         }
 
-       
-                public class xxx
-                {
 
-                     public static string lablezi;
-                     public static string textzi;
-   
-                }
-         
+     
+
         private void Form1_Load(object sender, EventArgs e)
         {
             treeView1.LabelEdit = true;
 
-           
-            String fu = "select * from fu";          
+
+            String fu = "select * from fu";
             DataSet Datafu = new DataSet();
-            DataSet Datazi = new DataSet();
-          
             SqlConnection constr;
-            constr = new SqlConnection("server=.;database=ceshi;integrated security = SSPI");
+            constr = new SqlConnection("server=.;database=fuzi;integrated security = SSPI");
             constr.Open();
             SqlDataAdapter sqlfu = new SqlDataAdapter(fu, constr);
             sqlfu.Fill(Datafu, "1");
+
             foreach (DataRow row in Datafu.Tables["1"].Rows)
             {
-
-                String lablefu = row[2].ToString();
-                String name = row[1].ToString();
-                int sum = int.Parse(row[3].ToString());
-                treeView1.Nodes.Add(lablefu);
-                
-                    for (int i = 1; i < 2; i++)
-                    {
-                        String zi = "select * from zi where name='" + name + "'";
-                        SqlDataAdapter sqlzi = new SqlDataAdapter(zi, constr);
-                        sqlzi.Fill(Datazi, "1");
-                        foreach (DataRow row1 in Datazi.Tables["1"].Rows)
-                        {
-                            xxx.lablezi = row1[2].ToString();
-                            xxx.textzi = row1[3].ToString();
-                            //Console.WriteLine(xxx.lablezi+"    "+ xxx.textzi);
-                        }
-                    }
-                Console.WriteLine(xxx.lablezi + "+++" + xxx.textzi);
+                string name = row[0].ToString();
+               
+                treeView1.Nodes.Add(name);
             }
-             
-
-            //String zi = "select * from zi where name='" + name + "'";
-            //SqlDataAdapter sqlzi = new SqlDataAdapter(zi, constr);
-            //sqlfu.Fill(Datazi, "1");
-
-            //foreach (DataRow row1 in Datazi.Tables["1"].Rows)
-            //{
-            //    String lablefu = row1[2].ToString();
-            //    String name = row1[1].ToString();
-            //    int sum = int.Parse1(row[3].ToString());
-
-            //}
 
         }
-     
+
+        //string zi = "select zi.name,zi.text from zi inner join  fu on zi.name = fu.name where fu.name='" + name + "'";
+        //SqlDataAdapter sqlzi = new SqlDataAdapter(zi, constr);
+        //sqlzi.Fill(Datazi, "1");
+        //foreach (DataRow row1 in Datazi.Tables["1"].Rows)
+        //{
+        //    string lablezi = row1[0].ToString();
+        //    string textzi = row1[1].ToString();
+        //    Console.WriteLine(lablezi + "    " + textzi);
+        //}
 
 
+
+        //Console.WriteLine(xxx.lablezi + "+++" + xxx.textzi);
+
+
+
+        //String zi = "select * from zi where name='" + name + "'";
+        //SqlDataAdapter sqlzi = new SqlDataAdapter(zi, constr);
+        //sqlfu.Fill(Datazi, "1");
+
+        //foreach (DataRow row1 in Datazi.Tables["1"].Rows)
+        //{
+        //    String lablefu = row1[2].ToString();
+        //    String name = row1[1].ToString();
+        //    int sum = int.Parse1(row[3].ToString());
+
+        //}
 
 
         private void addgen_Click(object sender, EventArgs e)
         {
-            treeView1.Nodes.Add("默认标题");
+            rename_Click(sender, e);
+            String s = treeView1.SelectedNode.Text;
+            TreeNode nd = new TreeNode(s);
+
+            treeView1.SelectedNode = nd;
+
+            treeView1.Nodes.Add(s);
+        }
+  
+       
+
+
+        private void rename_Click(object sender, EventArgs e)
+        {
+            if (treeView1.SelectedNode != null)//判断是否存在选择节点
+            {
+                treeView1.SelectedNode.BeginEdit();
+               
+            }
+            else
+            {
+                MessageBox.Show("请选择节点后操作");
+            }
         }
 
         private void addzi_Click(object sender, EventArgs e)
         {
             if (treeView1.SelectedNode != null)//判断是否存在选择节点
             {
-                treeView1.SelectedNode.Nodes.Add("默认标题");
+                TreeNode nd = new TreeNode("默认标题");
+                treeView1.SelectedNode.Nodes.Add(nd);
+                treeView1.SelectedNode = nd;
+                rename_Click(sender, e);
+
             }
             else
             {
@@ -103,21 +118,30 @@ namespace 个人资料管理
         }
 
 
-        private void rename_Click(object sender, EventArgs e)
+      
+
+        private void addtext_Click(object sender, EventArgs e)
+        {
+            text.Visible = true;
+        }
+
+        private void remove_Click(object sender, EventArgs e)
         {
             if (treeView1.SelectedNode != null)//判断是否存在选择节点
             {
-                treeView1.SelectedNode.BeginEdit();
+                treeView1.Nodes.Remove(treeView1.SelectedNode);
+
+
+
+
+
+
+
             }
             else
             {
                 MessageBox.Show("请选择节点后操作");
             }
-        }
-
-        private void addtext_Click(object sender, EventArgs e)
-        {
-            text.Visible = true;
         }
 
 

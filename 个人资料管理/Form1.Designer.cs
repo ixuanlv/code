@@ -34,6 +34,7 @@
             this.text = new System.Windows.Forms.TextBox();
             this.rename = new System.Windows.Forms.Button();
             this.addtext = new System.Windows.Forms.Button();
+            this.remove = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // treeView1
@@ -74,7 +75,7 @@
             // 
             // rename
             // 
-            this.rename.Location = new System.Drawing.Point(338, 35);
+            this.rename.Location = new System.Drawing.Point(432, 35);
             this.rename.Name = "rename";
             this.rename.Size = new System.Drawing.Size(75, 23);
             this.rename.TabIndex = 7;
@@ -84,7 +85,7 @@
             // 
             // addtext
             // 
-            this.addtext.Location = new System.Drawing.Point(225, 35);
+            this.addtext.Location = new System.Drawing.Point(332, 35);
             this.addtext.Name = "addtext";
             this.addtext.Size = new System.Drawing.Size(75, 23);
             this.addtext.TabIndex = 8;
@@ -92,11 +93,22 @@
             this.addtext.UseVisualStyleBackColor = true;
             this.addtext.Click += new System.EventHandler(this.addtext_Click);
             // 
+            // remove
+            // 
+            this.remove.Location = new System.Drawing.Point(228, 35);
+            this.remove.Name = "remove";
+            this.remove.Size = new System.Drawing.Size(75, 23);
+            this.remove.TabIndex = 9;
+            this.remove.Text = "删除节点";
+            this.remove.UseVisualStyleBackColor = true;
+            this.remove.Click += new System.EventHandler(this.remove_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(875, 560);
+            this.Controls.Add(this.remove);
             this.Controls.Add(this.addtext);
             this.Controls.Add(this.rename);
             this.Controls.Add(this.text);
@@ -119,6 +131,7 @@
         private System.Windows.Forms.TextBox text;
         private System.Windows.Forms.Button rename;
         private System.Windows.Forms.Button addtext;
+        private System.Windows.Forms.Button remove;
     }
 }
 
