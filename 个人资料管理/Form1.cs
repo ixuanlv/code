@@ -11,12 +11,14 @@ using System.Windows.Forms;
 
 namespace 个人资料管理
 {
+
     public partial class Form1 : Form
     {
+        
         public Form1()
         {
             InitializeComponent();
-
+           
 
         }
 
@@ -73,16 +75,21 @@ namespace 个人资料管理
 
         //}
 
-
+     
         private void addgen_Click(object sender, EventArgs e)
         {
-            rename_Click(sender, e);
-            String s = treeView1.SelectedNode.Text;
-            TreeNode nd = new TreeNode(s);
+            
+            Form2 addfjd = new Form2();
+          
+            addfjd.Show();
+           
+            //rename_Click(sender, e);
+            //String s = treeView1.SelectedNode.Text;
+            //TreeNode nd = new TreeNode(s);
 
-            treeView1.SelectedNode = nd;
+            //treeView1.SelectedNode = nd;
 
-            treeView1.Nodes.Add(s);
+            //treeView1.Nodes.Add(s);
         }
   
        
